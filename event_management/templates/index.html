@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EventHub - Discover Amazing Events</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+   <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body{
+            background:#f5f6fa;
+            min-height:100vh;
+        }
+
+        /* Navbar */
+        .navbar{
+            background:#04152f;
+            padding:18px 0;
+            box-shadow:0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .navbar-brand{
+            color:#f5b000 !important;
+            font-size:35px;
+            font-weight:700;
+        }
+
+        .nav-link{
+            color:white !important;
+            font-size:18px;
+            font-weight:500;
+            margin-right:20px;
+        }
+
+        .nav-link:hover{
+            color:#f5b000 !important;
+        }
+
+        /* Login Section */
+        .login-section{
+            padding:100px 0;
+        }
+
+        .login-card{
+            border:none;
+            border-radius:25px;
+            box-shadow:0 15px 35px rgba(0,0,0,0.12);
+            overflow:hidden;
+        }
+
+        .card-body{
+            padding:60px;
+        }
+
+        .icon-box{
+            width:70px;
+            height:70px;
+            background:#fff0f0;
+            color:#dc3545;
+            border-radius:20px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:35px;
+            margin:auto;
+        }
+
+        .title{
+            color:#04152f;
+            font-weight:700;
+            font-size:45px;
+        }
+
+        .subtitle{
+            color:#6c757d;
+            font-size:20px;
+        }
+
+        .form-label{
+            font-weight:600;
+            color:#1f2937;
+        }
+
+        .form-control{
+            height:58px;
+            border-radius:12px;
+            font-size:18px;
+        }
+
+        .form-control:focus{
+            box-shadow:none;
+            border-color:#f5b000;
+        }
+
+        .btn-login{
+            background:#f5b000;
+            color:black;
+            font-weight:600;
+            font-size:22px;
+            border:none;
+            height:58px;
+            border-radius:12px;
+        }
+
+        .btn-login:hover{
+            background:#e2a200;
+        }
+
+        .divider{
+            display:flex;
+            align-items:center;
+            margin:35px 0;
+            color:#888;
+        }
+
+        .divider::before,
+        .divider::after{
+            content:"";
+            flex:1;
+            border-bottom:1px solid #ddd;
+        }
+
+        .divider span{
+            margin:0 20px;
+        }
+
+        .register-link{
+            color:#d99800;
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        .register-link:hover{
+            color:#b8860b;
+        }
+
+        /* Footer */
+        footer{
+            background:#04152f;
+            color:white;
+            padding:50px 0 20px;
+            margin-top:50px;
+        }
+
+        .footer-title{
+            color:#f5b000;
+            font-weight:700;
+        }
+
+        .footer-link{
+            color:#d1d5db;
+            text-decoration:none;
+        }
+
+        .footer-link:hover{
+            color:#f5b000;
+        }
+        body{
+            background:#f8f9fa;
+        }
+
+        .navbar{
+            background:#03142f;
+        }
+
+        .navbar-brand{
+            color:#f5b000 !important;
+            font-size:30px;
+            font-weight:bold;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+        }
+
+        .hero{
+            background:linear-gradient(
+                    rgba(3,20,47,.85),
+                    rgba(3,20,47,.85)
+            ),
+            url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30');
+
+            background-size:cover;
+            background-position:center;
+
+            min-height:85vh;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            text-align:center;
+
+            color:white;
+        }
+
+        .hero h1{
+            font-size:65px;
+            font-weight:800;
+        }
+
+        .gold{
+            color:#f5b000;
+        }
+
+        .btn-gold{
+            background:#f5b000;
+            color:black;
+            font-weight:700;
+            padding:12px 35px;
+        }
+
+        .section-title{
+            color:#03142f;
+            font-weight:700;
+        }
+
+        .feature-card{
+            border:none;
+            border-radius:20px;
+            transition:.3s;
+        }
+
+        .feature-card:hover{
+            transform:translateY(-10px);
+        }
+
+        .stats{
+            background:#03142f;
+            color:white;
+        }
+
+        footer{
+            background:#021127;
+            color:white;
+        }
+body{
+    background:#020b1c;
+    color:white;
+}
+
+.hero-section{
+    padding:100px 0;
+    background:#04152f;
+}
+
+.hero-tag{
+    color:#f5b000;
+    letter-spacing:3px;
+    font-size:14px;
+}
+
+.hero-title{
+    font-size:70px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.hero-title span{
+    color:#f5b000;
+}
+
+.hero-text{
+    color:#cbd5e1;
+    font-size:22px;
+}
+
+.hero-img{
+    max-width:450px;
+}
+
+.stats-section{
+    background:#06152d;
+    padding:60px 0;
+}
+
+.stats-section h2{
+    color:#f5b000;
+    font-size:50px;
+}
+
+.category-btn{
+    background:#18263d;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:30px;
+}
+
+.category-btn.active{
+    background:#f5b000;
+    color:black;
+}
+
+.event-card{
+    background:#0d1730;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+}
+
+.event-card img{
+    height:230px;
+    width:100%;
+    object-fit:cover;
+}
+
+.testimonial-card{
+    background:#111b34;
+    padding:30px;
+    border-radius:20px;
+}
+
+.cta-section{
+    background:#07132b;
+    padding:80px 0;
+}
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+       <a class="navbar-brand" href="{% url 'index' %}">
+    EventHub
+</a>
+
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+           <ul class="navbar-nav ms-auto align-items-center">
+
+    <!-- Index -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'index' %}">
+            Home
+        </a>
+    </li>
+
+    <!-- About -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">
+            About
+        </a>
+    </li>
+
+    <!-- Gallery -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'gallery' %}">
+            Gallery
+        </a>
+    </li>
+
+    <!-- Contact -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">
+            Contact Us
+        </a>
+    </li>
+
+    <!-- Registration -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'register' %}">
+            Registration
+        </a>
+    </li>
+
+    <!-- Login -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">
+            Login
+        </a>
+    </li>
+
+    <!-- Admin Login -->
+    <li class="nav-item ms-lg-3">
+        <a class="btn btn-warning fw-bold px-4"
+           href="/admin/login/">
+            Admin Login
+        </a>
+    </li>
+
+</ul>
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="hero-tag">
+                    YOUR PREMIER EVENT PLATFORM
+                </span>
+
+                <h1 class="hero-title">
+
+                    Discover & Book
+
+                    <span>
+                        Amazing Events
+                    </span>
+
+                </h1>
+
+                <p class="hero-text">
+
+                    From concerts to workshops — find events
+                    that inspire, connect and entertain.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="{% url 'register' %}"
+                       class="btn btn-warning btn-lg px-4">
+
+                        Explore Events
+
+                    </a>
+
+                    <a href="{% url 'register' %}"
+                       class="btn btn-outline-light btn-lg px-4 ms-2">
+
+                        Create Account
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Statistics -->
+<section class="stats-section">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+<h2>2400+</h2>
+<p>Events Hosted</p>
+</div>
+
+<div class="col-md-3">
+<h2>18K+</h2>
+<p>Attendees Served</p>
+</div>
+
+<div class="col-md-3">
+<h2>42</h2>
+<p>Cities Covered</p>
+</div>
+
+<div class="col-md-3">
+<h2>96%</h2>
+<p>Satisfaction Score</p>
+</div>
+
+</div>
+
+</div>
+</section>
+</br>
+<section class="container py-5">
+
+<h6 class="text-warning">
+BROWSE BY CATEGORY
+</h6>
+
+<div class="d-flex flex-wrap gap-3 mt-3">
+
+<button class="category-btn active">
+All Events
+</button>
+
+<button class="category-btn">
+Concerts
+</button>
+
+<button class="category-btn">
+Corporate
+</button>
+
+<button class="category-btn">
+Workshops
+</button>
+
+<button class="category-btn">
+Sports
+</button>
+
+<button class="category-btn">
+Social
+</button>
+
+</div>
+
+</section>
+
+<section class="container pb-5">
+
+<div class="d-flex justify-content-between mb-4">
+
+<h2 class="text-white">
+Happening Soon
+</h2>
+
+<a href="#" class="text-warning">
+View All →
+</a>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+
+<div class="event-card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccv-B8Z8D7Q9oAsgblTYeZr5W79TGK7fbnwodCBzilCUJgWetLWgNEBff&s=10"
+     class="img-fluid">
+
+<div class="p-3">
+
+<span class="badge bg-primary">
+Concert
+</span>
+
+<h4 class="mt-3">
+Mumbai Jazz Night 2025
+</h4>
+
+<p>
+📅 12 July 2025
+</p>
+
+<p>
+📍 NCPA Mumbai
+</p>
+
+<button class="btn btn-warning w-100">
+
+Book Now
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="event-card">
+
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865"
+     class="img-fluid">
+
+<div class="p-3">
+
+<span class="badge bg-success">
+Corporate
+</span>
+
+<h4 class="mt-3">
+Tech Leaders Summit
+</h4>
+
+<p>
+📅 19 July 2025
+</p>
+
+<p>
+📍 Jio World Centre
+</p>
+
+<button class="btn btn-warning w-100">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="event-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+     class="img-fluid">
+
+<div class="p-3">
+
+<span class="badge bg-warning text-dark">
+Workshop
+</span>
+
+<h4 class="mt-3">
+Python Bootcamp
+</h4>
+
+<p>
+📅 25 July 2025
+</p>
+
+<p>
+📍 Andheri East
+</p>
+
+<button class="btn btn-warning w-100">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container py-5">
+
+<h6 class="text-warning">
+WHAT PEOPLE SAY
+</h6>
+
+<h2 class="text-white mb-5">
+Loved by Event-Goers
+</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p class="mt-3">
+
+Booked 3 events in one evening.
+Amazing experience.
+
+</p>
+
+<h5>Priya Rajan</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p class="mt-3">
+
+The PDF ticket worked perfectly.
+
+</p>
+
+<h5>Arjun Kapoor</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p class="mt-3">
+
+Very smooth booking process.
+
+</p>
+
+<h5>Sneha Mehta</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta-section">
+
+<div class="container text-center">
+
+<h2>
+
+Ready to experience something new?
+
+</h2>
+
+<p>
+
+Join 18,000+ people who trust EventHub.
+
+</p>
+
+<div class="mt-4">
+
+<a href="{% url 'register' %}"
+   class="btn btn-warning btn-lg px-5">
+
+Browse Events
+
+</a>
+
+<a href="{% url 'register' %}"
+   class="btn btn-outline-light btn-lg px-5 ms-2">
+
+Create Account
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-md-4 mb-4">
+
+                <h3 class="footer-title">
+                    EventHub
+                </h3>
+
+                <p class="text-secondary">
+
+                    Discover, book and enjoy amazing events.
+                    From concerts and workshops to conferences,
+                    EventHub makes event booking simple and convenient.
+
+                </p>
+
+            </div>
+
+            <!-- Links -->
+            <div class="col-md-4 mb-4">
+
+                <h5 class="footer-title">
+                    Quick Links
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="/"
+                           class="footer-link">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{% url 'register' %}"
+                           class="footer-link">
+                            Registration
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{% url 'login' %}"
+                           class="footer-link">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/admin/login/"
+                           class="footer-link">
+                            Admin Login
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-4 mb-4">
+
+                <h5 class="footer-title">
+                    Contact Us
+                </h5>
+
+                <p>
+                    📧 support@eventhub.com
+                </p>
+
+                <p>
+                    📞 +91 9876543210
+                </p>
+
+                <p>
+                    📍 Mumbai, Maharashtra, India
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center">
+
+            <small class="text-secondary">
+
+                © 2026
+                <span class="text-warning fw-bold">
+                    EventHub
+                </span>
+                • Discover • Book • Experience
+
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>

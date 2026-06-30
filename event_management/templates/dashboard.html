@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | EventHub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        
+        .hero{
+            min-height:85vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+
+        .hero-title{
+            font-size:70px;
+            font-weight:800;
+            line-height:1.2;
+        }
+
+        .gold{
+            color:#f5b000;
+        }
+
+        .hero-text{
+            color:#c9c9c9;
+            font-size:28px;
+        }
+
+        .tag{
+            background:rgba(255,193,7,0.15);
+            color:#f5b000;
+            border-radius:50px;
+            padding:12px 30px;
+            display:inline-block;
+            letter-spacing:2px;
+            font-weight:600;
+        }
+
+        .btn-gold{
+            background:#f5b000;
+            color:black;
+            padding:15px 40px;
+            font-size:24px;
+            font-weight:600;
+        }
+
+        .btn-outline-gold{
+            border:2px solid #f5b000;
+            color:#f5b000;
+            padding:15px 40px;
+            font-size:24px;
+            font-weight:600;
+        }
+
+        .navbar{
+            background:#021127;
+        }
+
+        .navbar-brand{
+            color:#f5b000 !important;
+            font-size:35px;
+            font-weight:bold;
+        }
+
+        .nav-link{
+            color:white !important;
+            font-size:20px;
+            margin-right:20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="/">
+    EventHub
+</a>
+
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'event_list' %}">
+                        Events
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'dashboard' %}">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'my_bookings' %}">
+                        My Bookings
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'profile' %}">
+                        Profile
+                    </a>
+                </li>
+
+              
+
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="btn btn-warning fw-bold ms-3"
+                       href="{% url 'logout' %}">
+                        Logout
+                    </a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="btn btn-warning fw-bold ms-3"
+                       href="{% url 'login' %}">
+                        Login
+                    </a>
+                </li>
+                {% endif %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- Welcome Section -->
+<div class="container mt-5">
+
+    <h2 class="fw-bold">
+
+        Welcome,
+        {{ request.user.username }}
+
+    </h2>
+
+    <p class="text-muted">
+
+        Here's an overview of your activity
+
+    </p>
+
+</div>
+
+
+<!-- Statistics Cards -->
+<div class="container mt-4">
+
+    <div class="row g-4">
+
+        <!-- My Bookings -->
+        <div class="col-md-6">
+
+            <div class="card border-0 rounded-5 shadow-lg text-white">
+
+                <div class="card-body p-5"
+                     style="background:linear-gradient(135deg,#081526,#1f4b7f);
+                            border-radius:30px;">
+
+                    <h4 class="text-uppercase text-light fw-bold">
+
+                        My Bookings
+
+                    </h4>
+
+                    <h1 class="display-3 fw-bold">
+
+                        {{ total_bookings }}
+
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Upcoming Events -->
+        <div class="col-md-6">
+
+            <div class="card border-0 rounded-5 shadow-lg text-white">
+
+                <div class="card-body p-5"
+                     style="background:linear-gradient(135deg,#d97706,#f4b000);
+                            border-radius:30px;">
+
+                    <h4 class="text-uppercase text-light fw-bold">
+
+                        Upcoming Events
+
+                    </h4>
+
+                    <h1 class="display-3 fw-bold">
+
+                        {{ upcoming_events }}
+
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Profile + Recent Bookings -->
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+
+        <!-- Profile -->
+        <div class="col-lg-4 mb-4">
+
+            <div class="card border-0 shadow rounded-5">
+
+                <div class="card-body p-4">
+
+                    <div class="text-center mb-4">
+
+                        <i class="bi bi-person-circle
+                                  display-1 text-secondary">
+                        </i>
+
+                    </div>
+
+                    <h4 class="fw-bold text-center mb-4">
+
+                        Profile Information
+
+                    </h4>
+
+                    <p>
+
+                        <strong>Username :</strong>
+
+                        <br>
+
+                        {{ request.user.username }}
+
+                    </p>
+
+                    <hr>
+
+                    <p>
+
+                        <strong>Email :</strong>
+
+                        <br>
+
+                        {{ request.user.email }}
+
+                    </p>
+
+                    <div class="text-center mt-4">
+
+                        <a href="{% url 'profile' %}"
+                           class="btn btn-warning px-4">
+
+                            Edit Profile
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recent Bookings -->
+        <div class="col-lg-8">
+
+            <div class="card border-0 shadow rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold mb-4">
+
+                        Recent Bookings
+
+                    </h4>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover">
+
+                            <thead class="table-dark">
+
+                                <tr>
+
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                    <th>Location</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                            {% for booking in recent_bookings %}
+
+                                <tr>
+
+                                    <td>
+                                        {{ booking.event.title }}
+                                    </td>
+
+                                    <td>
+                                        {{ booking.event.date }}
+                                    </td>
+
+                                    <td>
+                                        {{ booking.event.location }}
+                                    </td>
+
+                                </tr>
+
+                            {% empty %}
+
+                                <tr>
+
+                                    <td colspan="3"
+                                        class="text-center">
+
+                                        No bookings yet.
+
+                                    </td>
+
+                                </tr>
+
+                            {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+
+                <h3 class="fw-bold text-warning">
+
+                    EventHub
+
+                </h3>
+
+                <p class="text-secondary">
+
+                    Discover, book and enjoy amazing events.
+                    EventHub makes event booking simple
+                    and convenient.
+
+                </p>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="text-warning">
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="/"
+                           class="text-light text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{% url 'event_list' %}"
+                           class="text-light text-decoration-none">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{% url 'my_bookings' %}"
+                           class="text-light text-decoration-none">
+                            My Bookings
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="{% url 'profile' %}"
+                           class="text-light text-decoration-none">
+                            Profile
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="text-warning">
+
+                    Contact Us
+
+                </h5>
+
+                <p>
+                    📧 support@eventhub.com
+                </p>
+
+                <p>
+                    📞 +91 9876543210
+                </p>
+
+                <p>
+                    📍 Mumbai, Maharashtra, India
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center text-secondary mb-0">
+
+            © 2026 EventHub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
