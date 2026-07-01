@@ -218,149 +218,117 @@ http://127.0.0.1:8000/admin-dashboard/
 
 ---
 
-# 📸 Project Screenshots
+## 📸 Project Screenshots
 
-## 🏠 Home Page
-
-![Home](screenshots/Home.png)
-
----
-
-## 📝 User Registration
-
-![Registration](screenshots/registration.png)
+### 🏠 Home Page
+![Home](event_management/screenshots/Home.png)
 
 ---
 
-## 🔐 User Login
-
-![Login](screenshots/login.png)
-
----
-
-## 👤 User Dashboard
-
-![Dashboard](screenshots/UserDashboard.png)
+### 📝 User Registration
+![Registration](event_management/screenshots/registration.png)
 
 ---
 
-## 📅 Events Page
-
-![Events](screenshots/eventPage.png)
-
----
-
-## ➕ Add Event (Admin)
-
-![Add Event](screenshots/AddEvent.png)
+### 🔑 User Login
+![Login](event_management/screenshots/login.png)
 
 ---
 
-## 🎟 Event Booking
-
-![Book Event](screenshots/BookEvent.png)
-
----
-
-## 💳 Payment
-
-![Payment](screenshots/Payment.png)
+### 🎯 User Dashboard
+![User Dashboard](event_management/screenshots/UserDashboard.png)
 
 ---
 
-## ✅ Payment Confirmation
-
-![Payment Confirmation](screenshots/ConfirmPayment.png)
-
----
-
-## 🎉 Booking Confirmation
-
-![Booking Confirmation](screenshots/BookingConfirmation.png)
+### 📅 Events Page
+![Events](event_management/screenshots/eventPage.png)
 
 ---
 
-## 📄 Download Ticket (PDF)
-
-![Download Ticket](screenshots/DownloadTicket(PDF).png)
-
----
-
-## ❌ Cancel Booking
-
-![Cancel Booking](screenshots/CancleBooking.png)
+### ➕ Add Event (Admin)
+![Add Event](event_management/screenshots/AddEvent.png)
 
 ---
 
-## 💰 Transaction History
-
-![Transaction History](screenshots/TransactionHistory.png)
-
----
-
-## 💵 Refund Status
-
-![Refund Status](screenshots/RefundStatus.png)
+### 🎟 Book Event
+![Book Event](event_management/screenshots/BookEvent.png)
 
 ---
 
-## 👤 Update Profile
-
-![Update Profile](screenshots/UpdateProfile.png)
-
----
-
-# 👨‍💼 Admin Screens
-
-## 🔐 Admin Login
-
-![Admin Login](screenshots/AdminLogin.png)
+### 💳 Payment Page
+![Payment](event_management/screenshots/Payment.png)
 
 ---
 
-## 📊 Admin Dashboard
-
-![Admin Dashboard](screenshots/AdminDashboard.png)
-
----
-
-## 📈 Dashboard Analytics
-
-![Dashboard Analytics](screenshots/AdminDashboard1.png)
+### ✅ Confirm Payment
+![Confirm Payment](event_management/screenshots/ConfirmPayment.png)
 
 ---
 
-## ⚙️ Dashboard Management
-
-![Dashboard Management](screenshots/AdminDashboard2.png)
-
----
-
-## 💳 Manage Payments
-
-![Manage Payments](screenshots/ManagePayment.png)
+### 🎉 Booking Confirmation
+![Booking Confirmation](event_management/screenshots/BookingConfirmation.png)
 
 ---
 
-## 📅 Past Events
-
-### User View
-
-![Past Events User](screenshots/PastEvent.png)
-
-### Admin View
-
-![Past Events Admin](screenshots/PastEventAdmin.png)
+### 📄 Download Ticket (PDF)
+![Download Ticket](event_management/screenshots/DownloadTicket(PDF).png)
 
 ---
 
-# 🌐 Live Demo
+### ❌ Cancel Booking
+![Cancel Booking](event_management/screenshots/CancleBooking.png)
 
-🚧 **Coming Soon**
+---
 
-- Frontend: Deploying on Render
-- Backend: Deploying on Render
+### 💰 Transaction History
+![Transaction History](event_management/screenshots/TransactionHistory.png)
 
+---
+
+### 🔄 Refund Status
+![Refund Status](event_management/screenshots/RefundStatus.png)
+
+---
+
+### 👤 Update Profile
+![Update Profile](event_management/screenshots/UpdateProfile.png)
+
+---
+
+## 👨‍💼 Admin Panel
+
+### 🔐 Admin Login
+![Admin Login](event_management/screenshots/AdminLogin.png)
+
+---
+
+### 📊 Admin Dashboard
+![Admin Dashboard](event_management/screenshots/AdminDashboard.png)
+
+---
+
+### 📈 Dashboard Statistics
+![Dashboard Statistics](event_management/screenshots/AdminDashboard1.png)
+
+---
+
+### ⚙️ Dashboard Management
+![Dashboard Management](event_management/screenshots/AdminDashboard2.png)
+
+---
+
+### 💳 Manage Payments
+![Manage Payments](event_management/screenshots/ManagePayment.png)
+
+---
+
+### 📅 Past Events (User)
+![Past Events](event_management/screenshots/PastEvent.png)
+
+---
+
+### 📅 Past Events (Admin)
+![Past Events Admin](event_management/screenshots/PastEventAdmin.png)
 ---
 
 # 🔮 Future Enhancements
