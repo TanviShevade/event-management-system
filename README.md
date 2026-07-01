@@ -1,4 +1,10 @@
-\# 🎉 Event Management System
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+
+![Django](https://img.shields.io/badge/Django-5.x-green?logo=django)
+
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+
+![License](https://img.shields.io/badge/License-Educational-orange)
 
 
 
