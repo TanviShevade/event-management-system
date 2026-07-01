@@ -1,756 +1,427 @@
+# 🎉 Event Management System
+
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-
-![Django](https://img.shields.io/badge/Django-5.x-green?logo=django)
-
+![Django](https://img.shields.io/badge/Django-5.0-green?logo=django)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
-
+![SQLite](https://img.shields.io/badge/Database-SQLite-blue?logo=sqlite)
 ![License](https://img.shields.io/badge/License-Educational-orange)
 
+A full-stack **Event Management System** developed using **Python, Django, HTML, Bootstrap, JavaScript, and SQLite** following the **Model-View-Template (MVT)** architecture.
 
+The system enables users to browse events, book tickets, complete payments, download PDF tickets with QR codes, receive email confirmations, and manage bookings through a user-friendly interface. Administrators can efficiently manage events, users, bookings, payments, and reports.
 
-A full-stack \*\*Event Management System\*\* developed using \*\*Python Django\*\* following the \*\*MVT (Model-View-Template)\*\* architecture. The system allows users to register, explore events, book tickets, make payments, download PDF tickets with QR codes, and receive email confirmations.
+> 🎓 Developed as an **MCA Semester II Mini Project**.
 
+---
 
+# 📖 Project Overview
 
-This project was developed as an \*\*MCA Semester 2 Mini Project\*\*.
+Managing events manually can be time-consuming and error-prone. This Event Management System provides a centralized platform where users can register, explore events, book tickets, and manage their bookings online.
 
+The application also provides an administrative dashboard for managing events, users, bookings, payments, and generating reports.
 
+---
 
-\---
+# ✨ Features
 
+## 👤 User Features
 
+- User Registration & Login
+- Secure Authentication
+- Profile Management
+- Browse Upcoming Events
+- Book Event Tickets
+- Multiple Seat Booking
+- Seat Availability Validation
+- Online Payment Module (Demo)
+- Transaction History
+- Cancel Bookings
+- Download PDF Tickets
+- QR Code Generated on Tickets
+- Email Confirmation with Ticket
+- User Dashboard
+- Responsive Bootstrap UI
 
-\# 📌 Project Description
+---
 
+## 👨‍💼 Admin Features
 
+- Django Admin Dashboard
+- Manage Users
+- Manage Events
+- Manage Bookings
+- Manage Payments
+- Generate PDF Reports
+- Generate Excel Reports
+- Event Seat Management
+- Prevent Editing of Past Events
 
-The Event Management System is a web application that simplifies event booking and management. Users can browse available events, book one or multiple seats, complete payments, download tickets, and manage their bookings. Administrators can manage events, users, payments, and generate reports through the Django Administration Dashboard.
+---
 
+# 🛠 Tech Stack
 
+## Backend
 
-\---
+- Python
+- Django
 
+## Frontend
 
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
 
-\# ✨ Features
+## Database
 
+- SQLite
 
+## Libraries Used
 
-\## User Features
+- ReportLab
+- OpenPyXL
+- QRCode
+- Pillow
+- SMTP Email
 
+---
 
+# 📂 Project Modules
 
-\- User Registration
+- User Authentication
+- Event Management
+- Booking Management
+- Payment Management
+- Ticket Generation
+- Dashboard
+- Reviews
+- Admin Dashboard
 
-\- User Login \& Logout
+---
 
-\- Profile Management
+# 📁 Project Structure
 
-\- Explore Upcoming Events
-
-\- Event Booking
-
-\- Multiple Seat Booking
-
-\- Seat Availability Validation
-
-\- Online Payment Module (Demo)
-
-\- Transaction History
-
-\- Booking Cancellation
-
-\- Download PDF Ticket
-
-\- QR Code on Ticket
-
-\- Email Confirmation with Ticket PDF
-
-\- Dashboard
-
-\- Responsive User Interface using Bootstrap 5
-
-
-
-\---
-
-
-
-\## Admin Features
-
-
-
-\- Django Administration Dashboard
-
-\- Manage Users
-
-\- Manage Events
-
-\- Manage Payments
-
-\- View Bookings
-
-\- PDF Report Generation
-
-\- Excel Report Generation
-
-\- Event Seat Management
-
-\- Prevent Editing of Past Events
-
-
-
-\---
-
-
-
-\# 🛠 Tech Stack
-
-
-
-\### Backend
-
-
-
-\- Python
-
-\- Django
-
-
-
-\### Frontend
-
-
-
-\- HTML5
-
-\- Bootstrap 5
-
-\- JavaScript
-
-
-
-\### Database
-
-
-
-\- SQLite
-
-
-
-\### Libraries Used
-
-
-
-\- ReportLab (PDF Generation)
-
-\- OpenPyXL (Excel Report)
-
-\- QRCode
-
-\- Pillow
-
-\- SMTP Email
-
-
-
-\---
-
-
-
-\# 📂 Project Modules
-
-
-
-\- User Authentication
-
-\- Event Management
-
-\- Booking Management
-
-\- Payment Management
-
-\- Ticket Generation
-
-\- Dashboard
-
-\- Reviews
-
-\- Admin Dashboard
-
-
-
-\---
-
-
-
-\# ⚙️ Installation Steps
-
-
-
-\## 1 Clone Repository
-
-
+```text
+EventManagementSystem/
+│
+├── users/
+├── events/
+├── bookings/
+├── payments/
+├── tickets/
+├── dashboard/
+├── admin_dashboard/
+├── reviews/
+├── templates/
+├── static/
+├── media/
+├── screenshots/
+├── db.sqlite3
+├── manage.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 🚀 Installation Guide
+
+## 1. Clone the Repository
 
 ```bash
-
 git clone https://github.com/TanviShevade/event-management-system.git
 
-
-
-\---
-
-
-
-\## 2 Go to Project Folder
-
-
-
-```bash
-
-cd EventManagementSystem
-
+cd event-management-system
 ```
 
+---
 
-
-\---
-
-
-
-\## 3 Create Virtual Environment
-
-
+## 2. Create Virtual Environment
 
 ```bash
-
 python -m venv venv
-
 ```
 
+---
 
+## 3. Activate Virtual Environment
 
-\---
-
-
-
-\## 4 Activate Virtual Environment
-
-
-
-\### Windows
-
-
+### Windows
 
 ```bash
-
-venv\\Scripts\\activate
-
+venv\Scripts\activate
 ```
 
-
-
-\### Linux/Mac
-
-
+### Linux / macOS
 
 ```bash
-
 source venv/bin/activate
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 5 Install Dependencies
-
-
+## 4. Install Dependencies
 
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 6 Apply Migrations
-
-
+## 5. Apply Database Migrations
 
 ```bash
-
 python manage.py makemigrations
 
-
-
 python manage.py migrate
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 7 Create Superuser
-
-
+## 6. Create Superuser (Optional)
 
 ```bash
-
 python manage.py createsuperuser
-
 ```
 
+---
 
-
-\---
-
-
-
-\## 8 Run Development Server
-
-
+## 7. Run Development Server
 
 ```bash
-
 python manage.py runserver
-
 ```
 
-
-
-Visit:
-
-
+Open in your browser:
 
 ```
-
-http://127.0.0.1:8000/index/
-
-```
-
-
-
-
-
-```
-
 http://127.0.0.1:8000/
-
 ```
 
-
-
-
-
-Admin Panel:
-
-
+Home Page
 
 ```
+http://127.0.0.1:8000/index/
+```
 
+Django Admin
+
+```
 http://127.0.0.1:8000/admin/
+```
 
+Custom Admin Dashboard
+
+```
 http://127.0.0.1:8000/admin-dashboard/
-
-
-
 ```
 
+---
 
+# 📸 Project Screenshots
 
-\---
+## 🏠 Home Page
 
+![Home](screenshots/Home.png)
 
+---
 
-\## 📷 Project Screenshots
+## 📝 User Registration
 
+![Registration](screenshots/registration.png)
 
+---
 
-\### 🏠 Home Page
+## 🔐 User Login
 
-!\[Home](screenshots/Home.png)
+![Login](screenshots/login.png)
 
+---
 
+## 👤 User Dashboard
 
-\---
+![Dashboard](screenshots/UserDashboard.png)
 
+---
 
+## 📅 Events Page
 
-\### 📝 User Registration
+![Events](screenshots/eventPage.png)
 
-!\[Registration](screenshots/registration.png)
+---
 
+## ➕ Add Event (Admin)
 
+![Add Event](screenshots/AddEvent.png)
 
-\---
+---
 
+## 🎟 Event Booking
 
+![Book Event](screenshots/BookEvent.png)
 
-\### 🔑 User Login
+---
 
-!\[Login](screenshots/login.png)
+## 💳 Payment
 
+![Payment](screenshots/Payment.png)
 
+---
 
-\---
+## ✅ Payment Confirmation
 
+![Payment Confirmation](screenshots/ConfirmPayment.png)
 
+---
 
-\### 🎯 User Dashboard
+## 🎉 Booking Confirmation
 
-!\[User Dashboard](screenshots/UserDashboard.png)
+![Booking Confirmation](screenshots/BookingConfirmation.png)
 
+---
 
+## 📄 Download Ticket (PDF)
 
-\---
+![Download Ticket](screenshots/DownloadTicket(PDF).png)
 
+---
 
+## ❌ Cancel Booking
 
-\### 📅 Events Page
+![Cancel Booking](screenshots/CancleBooking.png)
 
-!\[Events](screenshots/eventPage.png)
+---
 
+## 💰 Transaction History
 
+![Transaction History](screenshots/TransactionHistory.png)
 
-\---
+---
 
+## 💵 Refund Status
 
+![Refund Status](screenshots/RefundStatus.png)
 
-\### ➕ Add Event (Admin)
+---
 
-!\[Add Event](screenshots/AddEvent.png)
+## 👤 Update Profile
 
+![Update Profile](screenshots/UpdateProfile.png)
 
+---
 
-\---
+# 👨‍💼 Admin Screens
 
+## 🔐 Admin Login
 
+![Admin Login](screenshots/AdminLogin.png)
 
-\### 🎟 Book Event
+---
 
-!\[Book Event](screenshots/BookEvent.png)
+## 📊 Admin Dashboard
 
+![Admin Dashboard](screenshots/AdminDashboard.png)
 
+---
 
-\---
+## 📈 Dashboard Analytics
 
+![Dashboard Analytics](screenshots/AdminDashboard1.png)
 
+---
 
-\### 💳 Payment Page
+## ⚙️ Dashboard Management
 
-!\[Payment](screenshots/Payment.png)
+![Dashboard Management](screenshots/AdminDashboard2.png)
 
+---
 
+## 💳 Manage Payments
 
-\---
+![Manage Payments](screenshots/ManagePayment.png)
 
+---
 
+## 📅 Past Events
 
-\### ✅ Confirm Payment
+### User View
 
-!\[Confirm Payment](screenshots/ConfirmPayment.png)
+![Past Events User](screenshots/PastEvent.png)
 
+### Admin View
 
+![Past Events Admin](screenshots/PastEventAdmin.png)
 
-\---
+---
 
+# 🌐 Live Demo
 
+🚧 **Coming Soon**
 
-\### 🎉 Booking Confirmation
+- Frontend: Deploying on Render
+- Backend: Deploying on Render
 
-!\[Booking Confirmation](screenshots/BookingConfirmation.png)
+---
 
+# 🔮 Future Enhancements
 
+- Venue Management
+- Razorpay / Stripe Payment Gateway
+- Event Search & Filters
+- SMS Notifications
+- Event Wishlist
+- Analytics Dashboard
+- User Reviews & Ratings
+- Event Reminder Emails
 
-\---
+---
 
+# 🏛 Architecture
 
+The project follows the **Django Model-View-Template (MVT)** architecture.
 
-\### 📄 Download Ticket (PDF)
-
-!\[Download Ticket](screenshots/DownloadTicket(PDF).png)
-
-
-
-\---
-
-
-
-\### ❌ Cancel Booking
-
-!\[Cancel Booking](screenshots/CancleBooking.png)
-
-
-
-\---
-
-
-
-\### 💰 Transaction History
-
-!\[Transaction History](screenshots/TransactionHistory.png)
-
-
-
-\---
-
-
-
-\### 🔄 Refund Status
-
-!\[Refund Status](screenshots/RefundStatus.png)
-
-
-
-\---
-
-
-
-\### 👤 Update Profile
-
-!\[Update Profile](screenshots/UpdateProfile.png)
-
-
-
-\---
-
-
-
-\## 👨‍💼 Admin Panel
-
-
-
-\### 🔐 Admin Login
-
-!\[Admin Login](screenshots/AdminLogin.png)
-
-
-
-\---
-
-
-
-\### 📊 Admin Dashboard
-
-!\[Admin Dashboard](screenshots/AdminDashboard.png)
-
-
-
-\---
-
-
-
-\### 📈 Dashboard Statistics
-
-!\[Dashboard Statistics](screenshots/AdminDashboard1.png)
-
-
-
-\---
-
-
-
-\### ⚙️ Manage Dashboard
-
-!\[Manage Dashboard](screenshots/AdminDashboard2.png)
-
-
-
-\---
-
-
-
-\### 💳 Manage Payments
-
-!\[Manage Payments](screenshots/ManagePayment.png)
-
-
-
-\---
-
-
-
-\### 📅 Past Events (User)
-
-!\[Past Events](screenshots/PastEvent.png)
-
-
-
-\---
-
-
-
-\### 📅 Past Events (Admin)
-
-!\[Past Events Admin](screenshots/PastEventAdmin.png)
-
-\# 🚀 Future Enhancements
-
-
-
-\- Venue Management
-
-\- Real Payment Gateway Integration (Razorpay/Stripe)
-
-\- Event Search \& Filters
-
-\- SMS Notification
-
-\- Event Wishlist
-
-\- Analytics Dashboard
-
-\- User Reviews \& Ratings
-
-\- Event Reminder Emails
-
-
-
-
-
-\---
-
-
-
-\# 📚 Project Architecture
-
-
-
-The project follows the \*\*Django MVT (Model-View-Template)\*\* architecture.
-
-
-
-```
-
+```text
 User
-
-&#x20;  │
-
-&#x20;  ▼
-
-URL
-
-&#x20;  │
-
-&#x20;  ▼
-
-View
-
-&#x20;  │
-
-&#x20;  ▼
-
-Model
-
-&#x20;  │
-
-&#x20;  ▼
-
-Database (SQLite)
-
-&#x20;  │
-
-&#x20;  ▼
-
-Template (HTML + Bootstrap)
-
+   │
+   ▼
+URLs
+   │
+   ▼
+Views
+   │
+   ▼
+Models
+   │
+   ▼
+SQLite Database
+   │
+   ▼
+Templates (HTML + Bootstrap)
 ```
 
+---
 
+# 👩‍💻 Developer
 
-\---
+**Tanvi Shevade**
 
+🎓 MCA Student
 
+💻 Aspiring Full Stack Developer
 
-\# 📁 Project Structure
+### Connect with Me
 
+- **GitHub:** https://github.com/TanviShevade
+- **LinkedIn:** https://www.linkedin.com/in/tanvi-shevade-aabbb6280
 
+---
 
-```
+# ⭐ Support
 
-EventManagementSystem/
+If you found this project helpful, please consider giving it a ⭐ on GitHub. It motivates me to build more open-source projects.
 
-│
+---
 
-├── users/
+# 📄 License
 
-├── events/
-
-├── bookings/
-
-├── payments/
-
-├── tickets/
-
-├── dashboard/
-
-├── admin\_dashboard/
-
-├── reviews/
-
-├── templates/
-
-├── static/
-
-├── media/
-
-├── db.sqlite3
-
-├── manage.py
-
-└── requirements.txt
-
-```
-
-
-
-\---
-
-
-
-\# 👨‍💻 Author
-
-
-
-Tanvi Shevade
-
-
-
-MCA Student
-
-
-
-Python | Django Developer
-
-
-
-GitHub: https://github.com/TanviShevade
-
-
-
-LinkedIn: https://www.linkedin.com/in/tanvi-shevade-aabbb6280
-
-
-
-\---
-
-
-
-\# ⭐ If you like this project
-
-
-
-Please consider giving this repository a ⭐ on GitHub.
-
+This project was developed as an **MCA Semester II Mini Project** for educational and learning purposes.
